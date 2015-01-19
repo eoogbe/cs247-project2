@@ -1,0 +1,98 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: #dedee0;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.page {
+    padding-top: 100px;
+}
+
+.page:nth-child(4n + 1) {
+    background-color: #fff;
+}
+
+/* hr trick taken from http://stackoverflow.com/a/11889223/830988 */
+
+hr {
+    height: 0.5em;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    font-size: 36px;
+    line-height: 0;
+}
+
+hr:after {
+    content: ".........................................................................................................";
+    letter-spacing: 4px;
+}
+
+#home {
+    background-color: #dedee0;
+    padding-top: 0;
+}
+
+#main-nav {
+    position: fixed;
+    right: 10px;
+    background-color: #dedee0;
+    z-index: 1;
+}
+
+.nav-boxes li {
+    background-color: #333;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+.nav-boxes a {
+    color: #fff;
+}
+
+/* Arrow taken from http://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-down {
+    display: block;
+    width: 0;
+	height: 0;
+    padding: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-top: 40px solid #333;
+    border-bottom: 0;
+}
+
+h1 {
+    display: inline-block;
+}
+
+h1 small {
+    display: block;
+    margin-top: 3px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#about p {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+#portfolio img {
+	z-index: 2;
+	position: relative;
+}
+
+#dynamo-sm img {
+    margin-bottom: 20px;
+}
+
+#freedom-beacon img {
+    margin-bottom: 19px;
+}

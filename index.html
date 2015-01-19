@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS 247 Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body data-spy="scroll" data-target="#main-nav">
+    <div class="page container" id="home">
+        <nav id="main-nav">
+            <ul class="list-unstyled nav-boxes">
+               <li><a href="#about">About</a></li>
+               <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <button id="next-btn" class="arrow-down"><span class="sr-only">Next</span></button>
+        </nav>
+        <header>
+            <h1>
+                <img src="images/name.jpg" alt="My name, Eva, formed out of the negative space of silhouettes of dancers" title="Eva" width="480" height="200">
+                <small class="clearfix"><span class="pull-right">It's about what's not there</span></small>
+            </h1>
+        </header>
+    </div>
+    <hr>
+    <main role="main">
+        <div class="page" id="about">
+            <div class="container">
+                <div class="row" id="about">
+                    <p class="col-xs-4">
+                        Hi there. I'm <strong>Eva Ogbe</strong>. I'm a student in
+                        <strong>CS 247</strong> with big dreams of becoming a UX designer.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="page container" id="portfolio">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive" src="images/dynamo-home.jpg" width="631" height="300">
+                </div>
+                <div class="col-sm-2" id="dynamo-sm">
+                    <img class="img-responsive" src="images/dynamo-ideas.jpg" width="158" height="75">
+                    <img class="img-responsive" src="images/dynamo-about.jpg" width="158" height="75">
+                    <img class="img-responsive" src="images/dynamo-forum.jpg" width="158" height="75">
+                    <div class="pull-right">Dynamo</div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1" id="freedom-beacon">
+                    <img class="img-responsive" src="images/freedom-beacon-splash.jpg" width="318" height="150">
+                    <img class="img-responsive" src="images/freedom-beacon-home.jpg" width="318" height="150">
+                    <div class="pull-right">CS 147</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
