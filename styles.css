@@ -5,8 +5,7 @@ body {
 
 body {
     background-color: #dedee0;
-    font-family: 'Open Sans', sans-serif;
-    position: relative;
+    font-family: "Open Sans", sans-serif;
 }
 
 .page {
@@ -45,15 +44,22 @@ hr:after {
     z-index: 1;
 }
 
-.nav-boxes li {
-    background-color: #333;
+.nav-boxes > li {
     margin-bottom: 5px;
-    padding: 3px;
     text-align: center;
 }
 
-.nav-boxes a {
+.nav-boxes > li > a {
+	display: block;
+	background-color: #333;
+	padding: 3px;
     color: #fff;
+}
+
+.nav-boxes > .active-box > a {
+	background-color: #fff;
+	border: 3px solid #333;
+	color: #333;
 }
 
 /* Arrow taken from http://css-tricks.com/snippets/css/css-triangle/ */
@@ -68,11 +74,102 @@ hr:after {
     border-bottom: 0;
 }
 
+.scale-anim {
+	-webkit-animation: scale 2s;
+	-moz-animation: scale 2s;
+	-o-animation: scale 2s;
+	animation: scale 2s;
+	-webkit-animation-delay: 3500ms;
+	-moz-animation-delay: 3500ms;
+	-o-animation-delay: 3500ms;
+	animation-delay: 3500ms;
+}
+
+.fade-in-anim {
+	-webkit-animation: fadeIn 7s;
+	-moz-animation: fadeIn 7s;
+	-o-animation: fadeIn 7s;
+	animation: fadeIn 7s;
+	opacity: 0.8;
+}
+
+@-webkit-keyframes scale {
+	from {
+		-webkit-transform: scale(1.5, 2.2);
+	}
+	to {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes scale {
+	from {
+		-moz-transform: scale(1.5, 2.2);
+	}
+	to {
+		-moz-transform: scale(1);
+	}
+}
+
+@-o-keyframes scale {
+	from {
+		-o-transform: scale(1.5, 2.2);
+	}
+	to {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes scale {
+	from {
+		transform: scale(1.5, 2.2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
+@-moz-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
+@-o-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
 h1 {
     display: inline-block;
 }
 
-h1 small {
+h1 > small {
     display: block;
     margin-top: 3px;
     text-transform: uppercase;
@@ -93,10 +190,10 @@ h1 small {
 	position: relative;
 }
 
-#dynamo-sm img {
+#dynamo-sm > img {
     margin-bottom: 20px;
 }
 
-#freedom-beacon img {
+#freedom-beacon > img {
     margin-bottom: 19px;
 }
