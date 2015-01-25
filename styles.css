@@ -6,10 +6,22 @@ body {
 body {
     background-color: #dedee0;
     font-family: "Open Sans", sans-serif;
+	font-size: 18px;
+}
+
+a {
+	color: #333;
+}
+
+a:hover {
+	color: #333;
 }
 
 .page {
     padding-top: 100px;
+	display: table;
+	width: 100%;
+	padding-bottom: 10px;
 }
 
 .page:nth-child(4n + 1) {
@@ -41,6 +53,7 @@ hr:after {
     position: fixed;
     right: 10px;
     background-color: #dedee0;
+	font-size: 14px;
     z-index: 1;
 }
 
@@ -68,21 +81,10 @@ hr:after {
     width: 0;
 	height: 0;
     padding: 0;
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
+	border-left: 40px solid #dedee0;
+	border-right: 40px solid #dedee0;
 	border-top: 40px solid #333;
     border-bottom: 0;
-}
-
-.scale-anim {
-	-webkit-animation: scale 2s;
-	-moz-animation: scale 2s;
-	-o-animation: scale 2s;
-	animation: scale 2s;
-	-webkit-animation-delay: 3500ms;
-	-moz-animation-delay: 3500ms;
-	-o-animation-delay: 3500ms;
-	animation-delay: 3500ms;
 }
 
 .fade-in-anim {
@@ -91,42 +93,6 @@ hr:after {
 	-o-animation: fadeIn 7s;
 	animation: fadeIn 7s;
 	opacity: 0.8;
-}
-
-@-webkit-keyframes scale {
-	from {
-		-webkit-transform: scale(1.5, 2.2);
-	}
-	to {
-		-webkit-transform: scale(1);
-	}
-}
-
-@-moz-keyframes scale {
-	from {
-		-moz-transform: scale(1.5, 2.2);
-	}
-	to {
-		-moz-transform: scale(1);
-	}
-}
-
-@-o-keyframes scale {
-	from {
-		-o-transform: scale(1.5, 2.2);
-	}
-	to {
-		-o-transform: scale(1);
-	}
-}
-
-@keyframes scale {
-	from {
-		transform: scale(1.5, 2.2);
-	}
-	to {
-		transform: scale(1);
-	}
 }
 
 @-webkit-keyframes fadeIn {
@@ -182,18 +148,100 @@ h1 > small {
 }
 
 #contact a {
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
-#portfolio img {
+#contact a:last-child {
+	margin-right: 0;
+}
+
+#portfolio {
+	display: block;
+}
+
+#portfolio-control-container {
+	margin-left: 15px;
+}
+
+.portfolio-toggle {
+	background-color: #333;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #333;
+	border-radius: 50%;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.portfolio-toggle.checked {
+	background-color: transparent;
+}
+
+#portfolio-desc-container {
+	height: 100px;
+}
+
+#portfolio-desc-container > .portfolio-desc {
+	display: none;
+}
+
+.portfolio-desc > .dl-horizontal > dt,
+.portfolio-desc > .dl-horizontal > dd {
+	margin-bottom: 0.1em;
+}
+
+.portfolio-desc > .dl-horizontal > dt {
+	width: 2.1em;
+	text-align: left;
+}
+
+.portfolio-desc > .dl-horizontal > dd {
+	margin-left: 2.5em;
+}
+
+#portfolio-work-container {
+	margin-top: 5px;
+}
+
+#portfolio-work-container,
+#portfolio-work-container > .outer-inset-border,
+#portfolio-work-container > .outer-inset-border > .inner-inset-border {
+	height: 100%;
+}
+
+#portfolio-work-container > .outer-inset-border,
+#portfolio-work-container > .outer-inset-border > .inner-inset-border {
+	border-style: solid;
+}
+
+#portfolio-work-container > .outer-inset-border {
+	border-width: 3px 0 0 3px;
+	border-color: #777;
+}
+
+#portfolio-work-container > .outer-inset-border > .inner-inset-border {
+	padding: 20px 25px;
+	border-width: 6px 0 0 6px;
+	border-color: #333;
+	margin: 0 -15px;
+}
+
+.portfolio-work {
+	display: none;
+}
+
+.portfolio-work img {
 	z-index: 2;
 	position: relative;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(75, 75, 75, 0.75);
+	-moz-box-shadow:    5px 5px 5px 0px rgba(88, 88, 88, 0.75);
+	box-shadow:         5px 5px 5px 0px rgba(75, 75, 75, 0.75);
 }
 
-#dynamo-sm > img {
-    margin-bottom: 20px;
+.stacked-img {
+	margin-bottom: 16.5px;
 }
 
-#freedom-beacon > img {
-    margin-bottom: 19px;
+#fb-right {
+	padding-top: 25%;
 }

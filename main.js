@@ -33,9 +33,36 @@ $(function(){
         smoothScroll($target.offset().top);
     });
     
-    $("#next-btn").click(function(){
+    $("#next-btn").click(function() {
         var newTop = $("body").scrollTop() + $(window).height() + 18;
         smoothScroll(newTop);
+    });
+    
+    $(".portfolio-toggle").click(function() {
+        var id = $(this).attr("id");
+        var $oldChecked = $(".portfolio-toggle.checked");
+        var oldId = $oldChecked.attr("id");
+        
+        if ($oldChecked.length === 0) {
+            $(this).addClass("checked");
+            $(this).attr("aria-checked", "true");
+            
+            $("#" + id + "-work").fadeIn(1000);
+            setTimeout(function() { $("#" + id + "-desc").fadeIn(1200) }, 800);
+        } else if (id != $oldChecked.attr("id")) {
+            $oldChecked.removeClass("checked");
+            $(this).addClass("checked");
+            
+            $oldChecked.attr("aria-checked", "false");
+            $(this).attr("aria-checked", "true");
+            
+            $("#" + oldId + "-work").hide(function(){
+                $("#" + id + "-work").fadeIn(1200);
+            });
+            $("#" + oldId + "-desc").hide(function(){
+                setTimeout(function() { $("#" + id + "-desc").fadeIn(1500) }, 1000);
+            });
+        }
     });
     
     $(window).resize(setPageSize);

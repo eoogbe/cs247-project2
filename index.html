@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CS 247 Portfolio</title>
+    <title>Eva Ogbe, aspiring full-stack developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700">
     <link rel="stylesheet" href="styles.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="page container" id="home">
-        <nav id="main-nav">
+        <nav id="main-nav" role="navigation">
             <ul class="list-unstyled nav-boxes">
                <li><a href="#about">About</a></li>
                <li><a href="#portfolio">Portfolio</a></li>
@@ -33,44 +33,135 @@
     <main role="main">
         <div class="page" id="about">
             <div class="container">
-                <div class="row" id="about">
-                    <p class="col-xs-4">
-                        Hi there! I'm <strong>Eva Ogbe</strong>. I'm a student in
-                        <strong>CS 247</strong> with big dreams of becoming a UX designer.
+                <div class="row">
+                    <p class="col-md-4">
+                        Hi there! I'm <strong>Eva Ogbe</strong>. I am a student at
+                        Stanford University with big dreams of becoming a
+                        professional Full-stack Developer.
                     </p>
-                    <div class="col-sm-4 col-sm-offset-4" id="contact">
+                </div>
+                <div class="row" id="contact">
+                    <div class="col-md-4 col-md-offset-6">
                         <a href="mailto:eoogbe@stanford.edu">
-                            <img src="images/mail_icon.png">
+                            <img src="images/mail_icon.png" width="98" height="60">
                         </a>
                         <a href="https://www.linkedin.com/pub/evawere-ogbe/83/188/15">
-                            <img src="images/linkedin_logo.png">
+                            <img src="images/linkedin_logo.png" width="60" height="60">
                         </a>
                         <a href="https://github.com/eoogbe">
-                            <img src="images/github_logo.png">
+                            <img src="images/github_logo.png" width="60" height="60">
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </div><!-- .col-md-4 -->
+                </div><!-- #contact -->
+            </div><!-- .container -->
+        </div><!-- #about -->
         <hr>
         <div class="page container" id="portfolio">
             <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive" src="images/dynamo-home.jpg" width="631" height="300">
-                </div>
-                <div class="col-sm-2" id="dynamo-sm">
-                    <img class="img-responsive" src="images/dynamo-ideas.jpg" width="158" height="75">
-                    <img class="img-responsive" src="images/dynamo-about.jpg" width="158" height="75">
-                    <img class="img-responsive" src="images/dynamo-forum.jpg" width="158" height="75">
-                    <div class="pull-right">Dynamo</div>
-                </div>
-                <div class="col-sm-3 col-sm-offset-1" id="freedom-beacon">
-                    <img class="img-responsive" src="images/freedom-beacon-splash.jpg" width="318" height="150">
-                    <img class="img-responsive" src="images/freedom-beacon-home.jpg" width="318" height="150">
-                    <div class="pull-right">CS 147</div>
+                <div id="portfolio-control-container" class="col-md-3">
+                    <ol class="list-inline" role="radiogroup">
+                        <li
+                            id="dynamo"
+                            class="portfolio-toggle"
+                            role="radio"
+                            aria-checked="false"
+                            aria-describedby="dynamo-desc"
+                            aria-controls="dynamo-work"
+                        ></li>
+                        <li
+                            id="fb"
+                            class="portfolio-toggle"
+                            role="radio"
+                            aria-checked="false"
+                            aria-describedby="fb-desc"
+                            aria-controls="fb-work"
+                        ></li>
+                        <li
+                            id="cs142"
+                            class="portfolio-toggle"
+                            role="radio"
+                            aria-checked="false"
+                            aria-describedby="cs142-desc"
+                            aria-controls="cs142-work"
+                        ></li>
+                    </ol>
+                    <ol id="portfolio-desc-container" class="list-inline" aria-live="polite" aria-relevant="all">
+                        <li class="portfolio-desc" id="dynamo-desc">
+                            <dl class="dl-horizontal">
+                                <dt>For</dt>
+                                <dd>
+                                    Academic Research (Accepted into
+                                    <a href="http://chi2015.acm.org/">CHI Conference</a>)
+                                </dd>
+                                <dt>Role</dt>
+                                <dd>Full-stack Developer</dd>
+                            </dl>
+                        </li>
+                        <li class="portfolio-desc" id="fb-desc">
+                            <dl class="dl-horizontal">
+                                <dt>For</dt>
+                                <dd>
+                                    A Class (Introduction to Human-Computer Interaction)
+                                </dd>
+                                <dt>Role</dt>
+                                <dd>Main Developer</dd>
+                            </dl>
+                        </li>
+                        <li class="portfolio-desc" id="cs142-desc">
+                            <dl class="dl-horizontal">
+                                <dt>For</dt>
+                                <dd>A Class (Web Applications)</dd>
+                                <dt>Role</dt>
+                                <dd>Sole Developer</dd>
+                            </dl>
+                        </li>
+                    </ol>
                 </div>
             </div>
-        </div>
+            <div class="row" id="portfolio-work-container" aria-live="polite" aria-relevant="additions removals">
+                <div class="col-md-7 col-md-offset-5 outer-inset-border">
+                    <ol class="inner-inset-border list-unstyled">
+                        <li class="portfolio-work" id="dynamo-work">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <img class="img-responsive" src="images/dynamo-home.jpg">
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row stacked-img">
+                                        <div class="col-md-12">
+                                            <img class="img-responsive" src="images/dynamo-ideas.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="row stacked-img">
+                                        <div class="col-md-12">
+                                            <img class="img-responsive" src="images/dynamo-about.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img class="img-responsive" src="images/dynamo-forum.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="portfolio-work" id="fb-work">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <img class="img-responsive" src="images/freedom-beacon-splash.jpg">
+                                </div>
+                                <div id="fb-right" class="col-md-4">
+                                    <img class="img-responsive" src="images/freedom-beacon-home.jpg">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="portfolio-work" id="cs142-work">
+                            <img class="img-responsive" src="images/cs142.jpg">
+                        </li>
+                    </ol>
+                </div><!-- .outer-inset-border -->
+            </div><!-- #portfolio-work-container -->
+        </div><!-- #portfolio -->
     </main>
 </body>
 </html>
